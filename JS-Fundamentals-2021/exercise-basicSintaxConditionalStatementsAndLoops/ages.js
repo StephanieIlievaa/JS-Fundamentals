@@ -16,4 +16,4 @@ let age = Number(number);
     }
 
 }
-solve(20);
+solve(3);

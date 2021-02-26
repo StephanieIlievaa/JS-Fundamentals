@@ -24,11 +24,11 @@ function muOnline(input) {
                 health += value;
             }
             console.log(`You healed for ${value} hp.`);
-            console.log(`Current health: ${health} hp`);
+            console.log(`Current health: ${health} hp.`);
 
         } else if (command == 'chest') {
             coins += value;
-            console.log(`You found ${value} coins`)
+            console.log(`You found ${value} bitcoins.`)
         } else {
             health -= value;
             //TO DO: if lower or equal than zero
@@ -40,7 +40,7 @@ function muOnline(input) {
 
             }
 
-            console.log(`You slayed ${command}`);
+            console.log(`You slayed ${command}.`);
         }
     }
     if (isAlive) {

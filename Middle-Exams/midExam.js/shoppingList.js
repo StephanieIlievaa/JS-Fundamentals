@@ -3,12 +3,12 @@ function solve(input) {
     let shoppingList = input.shift().split('!');
     let commands = input.shift();
 
-    while (command != 'Go shopping!') {
+    while (commands != 'Go shopping!') {
         let tokens = commands.split(' ');
         let command = tokens[0];
         let item = tokens[1];
 
-        let index = shoppimgList.indexOf(item);
+        let index = shoppingList.indexOf(item);
         switch (command) {
             case 'Urgent':  //add item
                 if (index < 0) {
@@ -44,4 +44,9 @@ function solve(input) {
     }
     console.log(shoppingList.join(', '));
 }
-solve('Tomatoes!Potatoes!Bread', 'Unnecessary Milk', 'Urgent Tomatoes', 'Go Shopping!');
+solve([
+    'Tomatoes!Potatoes!Bread',
+     'Unnecessary Milk', 
+     'Urgent Tomatoes', 
+     'Go Shopping!'
+    ]);
