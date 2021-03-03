@@ -1,18 +1,15 @@
-function reverse(length, numbers) {
-    let resultArray = [];
-    let reversedArray = [];
-    let result = [];
+function reverse(n, input) {
 
-    for (let i = 0; i < length; i++) {
-        resultArray[i] = numbers[i];
-    }
-    
-    for(let i = length - 1; i >= 0; i--){
-        result += resultArray[i] + ' ';
+    console.log(input.slice(0,n).reverse().join(' '));
 
-    }
-    
-    console.log(result);
-    
+    // let nNumbers = [];
+    // let reversed = [];
+    //  for (let index = 0; index < n; index++) {
+   //nNumbers.push(numbers[index]);
+    //    }
+    //  for (let index = nNumbers.length - 1; index >= 0; index--) {
+    //      reversed.push(nNumbers[index]);
+    //  }
+    //console.log(reversed.join(' '));
 }
 reverse(3, [10, 20, 30, 40, 50]);
