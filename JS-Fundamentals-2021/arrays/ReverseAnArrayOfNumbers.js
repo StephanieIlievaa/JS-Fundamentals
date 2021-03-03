@@ -12,4 +12,4 @@ function reverse(n, input) {
     //  }
     //console.log(reversed.join(' '));
 }
-reverse(3, [10, 20, 30, 40, 50]);
+reverse(4, [10, 20, 30, 40, 50]);

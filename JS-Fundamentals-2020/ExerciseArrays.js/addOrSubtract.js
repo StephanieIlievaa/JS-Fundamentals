@@ -1,4 +1,5 @@
 function solve(input) {
+
     let array = input;
     let newArray = [];
     let firstArrSum = 0;
@@ -8,13 +9,14 @@ function solve(input) {
         if(array[i] % 2 == 0){
            newArray.push(array[i] + i);
            secondArrSum += array[i] + i;
-        }
-        else{
+        } else{
             newArray.push(array[i] - i);
             secondArrSum += array[i] - i;
         }
         firstArrSum += array[i];
     }
+
+  
     console.log(newArray);
     console.log(firstArrSum);
     console.log(secondArrSum);

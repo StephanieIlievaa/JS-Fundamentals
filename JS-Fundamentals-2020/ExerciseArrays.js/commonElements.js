@@ -2,16 +2,16 @@ function elements(arr1, arr2) {
     let firstArray = arr1;
     let secondArray = arr2;
 
-    for(let i of firstArray){
-        for(let j of secondArray){
-            if(i === j){
-                console.log(i);
+    for (const el1 of firstArray) {
+        for (const el2 of secondArray) {
+            if (el1 === el2) {
+                console.log(el1);
             }
         }
     }
 }
 
-elements (
+elements(
     ['Hey', 'hello', 2, 4, 'Peter', 'e'],
-['Petar', 10, 'hey', 4, 'hello', '2']
-    );
+    ['Petar', 10, 'hey', 4, 'hello', '2']
+);

@@ -13,6 +13,6 @@ function equalArrays(arr1, arr2){
         sum += +firstEl;
     }
  
-    console.log(`Arrays are identical. Sum:${sum}`);
+    console.log(`Arrays are identical. Sum: ${sum}`);
 }
 equalArrays(['10','20','30'], ['10','20','30']);
