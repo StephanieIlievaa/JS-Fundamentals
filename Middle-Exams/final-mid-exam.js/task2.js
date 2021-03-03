@@ -1,4 +1,4 @@
-function weapon(input) {
+function task(input) {
 
     input.pop()
     let particles = input.shift().split('|')
@@ -28,7 +28,7 @@ function weapon(input) {
 
     console.log(`You crafted ${particles.join('')}!`);
 }
-weapon([
+task([
     'ha|Do|mm|om|er',
     'Move Right 0',
     'Move Left 3',
