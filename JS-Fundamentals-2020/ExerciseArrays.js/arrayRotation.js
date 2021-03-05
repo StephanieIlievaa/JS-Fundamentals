@@ -1,5 +1,10 @@
 function arrayRotation(arr, rot) {
 
+    //  let newArr = arr.splice(0,rot);
+    // let finalArr = arr.concat(newArr);
+    //  console.log(finalArr.join(' '));
+
+
     let rotations = rot % arr.length;
     let resultArr = [];
 
@@ -33,6 +38,6 @@ function arrayRotation(arr, rot) {
     console.log(resultStr);
 }
 arrayRotation(
-    [51, 47, 32, 61, 21],
-    2
+    [2, 4, 15, 31],
+    5
 );
