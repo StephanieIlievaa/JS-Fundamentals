@@ -1,16 +1,12 @@
-function solve(numbersInput) {
-let firstElementInput =  numbersInput[0];
-let lastElementInput = numbersInput.pop();
+function solve(arr) {
+   
+let first = Number(arr[0]);
+let last = Number(arr[arr.length - 1]);
 
-let firstNumber = Number(firstElementInput);
-let lastNumber = Number(lastElementInput);
+return first + last;
 
-let result = firstNumber + lastNumber;
-
-
-return result;
 }
 
 
-let result = solve(['20', '30', '40']);
-console.log(result);
+
+console.log(solve(['20', '30', '40']));
