@@ -1,9 +1,14 @@
-function solve(nameArg, areaArg, populationArg, countryArg, postCodeArg) {
+function solve(city) {
+    let properties = Object.keys(city);
 
-    let cityObject = { name: nameArg, area: areaArg, population: populationArg, country: countryArg, postCode: postCodeArg }
-
-    for (let key in cityObject) {
-        console.log(`${key} -> ${cityObject[key]}`);
+    for (let property of properties) {
+        console.log(`${property} -> ${city[property]}`);
     }
 }
-solve('Sofia', '492', '1238438', 'Bulgaria', '1000');
+solve({ 
+    name: "Sofia",
+area: 492,
+population: 1238438,
+country: "Bulgaria",
+postCode: "1000"
+});
