@@ -1,10 +1,8 @@
 function solve(word, text) {
-let old;
-while (old !== text) {
-    old = text;
-  text = text.replace(word, '');
-
-}
-console.log(text);
+  let patern = new RegExp(word, 'g');
+  while (patern.test(text)) {
+      text = text.replace(patern, '')
+  }
+  console.log(text);
 }
 solve('ice kicegiciceeb');
