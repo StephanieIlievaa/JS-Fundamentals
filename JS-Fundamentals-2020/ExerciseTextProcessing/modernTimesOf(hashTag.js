@@ -8,7 +8,6 @@ function solve(input) {
     if (el.match(/(#[A-z]+)/gim)) console.log(el.substring(1, ))
 }
  
-
     //     text = input.split(' ');
     //     for (let word of text) {
     //         if (word.startsWith("#") && isOnlyLetters(word.substring(1)) && word.length > 1) {
