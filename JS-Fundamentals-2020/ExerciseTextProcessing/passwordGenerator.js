@@ -1,18 +1,26 @@
-function solve(input) {
-//concat first and second string
-//every first vowel replace with vowel from the third string - toUpperCase
-//reverse the new password
-//print output: `Your generated password is ${password}`
-let firstString = input.shift();
-let secondString = input.shift();
-let thirdString = input.shift()
+function solve(arr) {
+    //concat first and second string
+    //first vowel character replace with character from the third string - toUpperCase
+    //reverse the new password
+    //print output: `Your generated password is ${password}`
 
-newString = firstString.concat(secondString);
-console.log(newString);
-for(let char of newString) {
-    newString.replace(char, thirdString[] )
+    let text = Array.from(arr[0] + arr[1]);
+    let chars = Array.from(arr[2].toUpperCase());
+
+    let password = [];
+
+    for (let i = 0; i < text.length; i++) {
+        if (/[aeiou]/.test(text[i])) {
+            let extractedChar = chars.shift();
+            chars.push(extractedChar);
+
+            let getIndex = text.indexOf(text[i]);
+            text[getIndex] = '';
+
+            password.push(extractedChar)
+        }
+        password.push(text[i]);
+    }
+console.log(`Your generated password is ${password.reverse().join('')}`);
 }
-console.log(newString);
-};
-
-solve([ 'ilovepizza', 'ihatevegetables', 'orange' ]);
+solve(['ilovepizza', 'ihatevegetables', 'orange']);
