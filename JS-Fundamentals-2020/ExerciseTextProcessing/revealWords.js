@@ -8,5 +8,15 @@ function solve(...input) {
         return finalText.join(' ')
       }
 }
+
+// function solve(firstP, secondP) {
+//   let sentence = secondP;
+//   let words = firstP.split(', ');
+//   words.forEach(element => {
+//       sentence = sentence.replace(('*'.repeat(element.length)), element);
+//   });
+//   console.log(sentence);  
+// }
+
 console.log(solve('great',
     'softuni is ***** place for learning new programming languages'));
