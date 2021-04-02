@@ -1,24 +1,26 @@
-function topInteger(arr) {
+function topInteger(input) {
 
-    let result = '';
 
-    for (let index = 0; index < arr.length; index++) {
-
-        let element = arr[index];
-        let isBiggerEnough = true;
-        for (let i = index + 1; i < arr.length; i++) {
-            let nextElement = arr[i];
-            if (element < nextElement) {
-                isBiggerEnough = false;
-                break;
+        let array = input;
+        let result = '';
+        let biggestNum = 0;
+        let position = 0;
+        while(array.length > 0) {
+            for (let j = 0; j < array.length; j++) {
+                if (biggestNum <= array[j]) {
+                    biggestNum = array[j];
+                    position = j;
+                }
             }
+            result += biggestNum + ' '; 
+            for(let x = 0; x <= position; x++){
+                array.shift();
+                biggestNum = 0;
+            }
+    
         }
-        if (isBiggerEnough) {
-            result += `${element} `;
-        }
+        console.log(result);
     }
-    console.log(result);
-}
 topInteger(
     [1, 4, 3, 2]
 );

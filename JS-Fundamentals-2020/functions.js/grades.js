@@ -1,18 +1,18 @@
 function grades(grade) {
 
 
-    if (grade >= 2.00 && grade <= 2.99) {
-        return "Fail";
+    if (grade >= 2.00 && grade <= 3.00) {
+        return `Fail (${grade})`;
     } else if (grade >= 3.00 && grade <= 3.49) {
-        return "Poor";
+        return `Poor (${grade})`;
     } else if (grade >= 3.50 && grade <= 4.49) {
-        return "Good";
+        return `Good (${grade})`;
     } else if (grade >= 4.50 && grade <= 5.49) {
-        return "Very good";
+        return `Very good (${grade})`;
     } else {
-        return "Exellent";
+        return `Exellent (${grade})`;
     }
 
 }
 
-console.log(grades(3.55));
+console.log(grades(2.99));

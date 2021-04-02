@@ -1,30 +1,33 @@
-function maxSequenceOfEqualElements(arr) {
+function maxSequenceOfEqualElements(input) {
 
-    let bestSequence = [];
 
-    for (let index = 0; index < arr.length; index++) {
-        let element = arr[index];
-        let currentSequence = [element];
-
-        for (let i = index + 1; i < arr.length; i++) {
-            let nextElement = arr[i];
-            index = i;
-
-            if (element === nextElement) {
-                currentSequence.push(nextElement);
-                index = i;
-            } else {
-                break;
+        let array = input;
+        let newArray = [array[0]];
+        let newArrayPosition = 0;
+        let equalsNums = 1;
+        let biggestEquals = 0;
+        let elements = array[0];
+        let result = '';
+    
+        for (let i = 1; i < array.length; i++) {
+            if (newArray[newArrayPosition] == array[i]) {
+                equalsNums++;
+                elements+= ' ' + array[i]; 
             }
-
+            else {
+                newArray.push(array[i]);
+                newArrayPosition++;
+                equalsNums = 1;
+                elements = array[i];
+            }
+            if (biggestEquals < equalsNums) {
+                biggestEquals = equalsNums;
+                result = elements;
+            }
         }
-        if (currentSequence.length > bestSequence) {
-            bestSequence = currentSequence;
-        }
-
+        console.log(result)
     }
-    console.log(bestSequence.join(' '));
-}
+    
 maxSequenceOfEqualElements(
     [4, 4, 4, 4]
 );

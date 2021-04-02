@@ -1,26 +1,17 @@
-function magicSum(array, magicNumber) {
-
-    let result = [];
-
-    for (let i = 0; i < array.length; i++) {
-        let currentElement = array[i];
-
-        for (let j = 0; j < array.length; j++) {
-
-
-            let nextElement = array[j];
-            let isMagic = (currentElement + nextElement) === magicNumber;
-            let possibleSequence = `${currentElement} ${nextElement}`;
-
-            if ((j !== i) && (isMagic) && (!result.includes(`${nextElement} ${currentElement}`))) {
-                result.push(possibleSequence);
-                isMagic = false;
+function solve(arr, n) {
+        let array = arr;
+        let num = Number(n);
+    
+        for(let i = 0; i < array.length; i++){
+            for(let j = 0; j < array.length; j++){
+                if(array[i] + array[j] == num && i < j){
+                    console.log(array[i] + ' ' + array[j]);
+                }
             }
-        }
+        }  
     }
-    console.log(result.join('\n'));
-}
-magicSum(
+    
+solve(
     [1, 7, 6, 2, 19, 23],
     8
 );
